@@ -13,7 +13,6 @@ require "dkl/DklRectCatAxis"
 require "dkl/DklLegend"
 require "dkl/DklLabel"
 require "dkl/DklUtilities"
-local negra = loadImage('data/notes/negra.png');
 
 function _LineGraph(x,y,w,h,data,categories)
 	pushMatrix()
@@ -24,34 +23,34 @@ function _LineGraph(x,y,w,h,data,categories)
 	local n = #data
 	beginShape()
 	for i=1,n do
-		if(res<w)then
+		if(res<w-30)then
 			if (data[i][1]==1) then
-				vertex(contador*30,h)
-				image(negra, contador*30-5, h-15)
+				vertex(contador*31,h)
+				image(data[i][2], contador*31-11, h-19)
 			elseif (data[i][1]==2 or data[i][1]==3) then
-				vertex(contador*30,h-10)
-				image(negra, contador*30-5, h-25)
+				vertex(contador*31,h-10)
+				image(data[i][2], contador*31-11, h-29)
 			elseif (data[i][1]==4 or data[i][1]==5) then
-				vertex(contador*30,h-20)
-				image(negra, contador*30-5, h-35)
+				vertex(contador*31,h-20)
+				image(data[i][2], contador*31-11, h-39)
 			elseif (data[i][1]==6 or data[i][1]==7) then
-				vertex(contador*30,h-30)
-				image(negra, contador*30-5, h-45)
+				vertex(contador*31,h-30)
+				image(data[i][2], contador*31-11, h-49)
 			elseif (data[i][1]==8) then
-				vertex(contador*30,h-40)
-				image(negra, contador*30-5, h-55)
+				vertex(contador*31,h-40)
+				image(data[i][2], contador*31-11, h-59)
 			elseif (data[i][1]==9 or data[i][1]==10) then
-				vertex(contador*30,h-50)
-				image(negra, contador*30-5, h-65)
+				vertex(contador*31,h-50)
+				image(data[i][2], contador*31-11, h-69)
 			elseif (data[i][1]==11 or data[i][1]==12) then
-				vertex(contador*30,h-60)
-				image(negra, contador*30-5, h-75)
+				vertex(contador*31,h-60)
+				image(data[i][2], contador*31-11, h-79)
 			end
-			res = (contador*30)
+			res = (contador*31)
 			contador = contador + 1
 		else
 			endShape()
-			translate(0,h)
+			translate(0,h+20)
 			DklRectCatAxis(w, h, categories)
 			res = 0
 			contador = 1
@@ -59,8 +58,6 @@ function _LineGraph(x,y,w,h,data,categories)
 		end
 	end
 	endShape()
-
-	
 
 	popMatrix()
 end
