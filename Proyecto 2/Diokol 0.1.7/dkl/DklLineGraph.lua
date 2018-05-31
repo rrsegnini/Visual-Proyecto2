@@ -28,12 +28,21 @@ function _LineGraph(x,y,w,h,data,categories)
 				vertex(contador*31,h)
 				image(data[i][2], contador*31-11, h-19)
 			elseif (data[i][1]==2 or data[i][1]==3) then
+				if(data[i][1]==3)then
+					image(sostenido, contador*31-20, h-29)
+				end
 				vertex(contador*31,h-10)
 				image(data[i][2], contador*31-11, h-29)
 			elseif (data[i][1]==4 or data[i][1]==5) then
+				if(data[i][1]==5)then
+					image(sostenido, contador*31-20, h-39)
+				end
 				vertex(contador*31,h-20)
 				image(data[i][2], contador*31-11, h-39)
 			elseif (data[i][1]==6 or data[i][1]==7) then
+				if(data[i][1]==7)then
+					image(sostenido, contador*31-20, h-49)
+				end
 				vertex(contador*31,h-30)
 				image(data[i][2], contador*31-11, h-49)
 			elseif (data[i][1]==8) then
@@ -43,6 +52,9 @@ function _LineGraph(x,y,w,h,data,categories)
 				vertex(contador*31,h-50)
 				image(data[i][2], contador*31-11, h-69)
 			elseif (data[i][1]==11 or data[i][1]==12) then
+				if(data[i][1]==12)then
+					image(sostenido, contador*31-20, h-79)
+				end
 				vertex(contador*31,h-60)
 				image(data[i][2], contador*31-11, h-79)
 			end
