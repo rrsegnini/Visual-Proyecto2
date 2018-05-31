@@ -25,7 +25,7 @@ sostenido = nil
 
 function setup()
 	size(width,height)
-	local f = loadFont("data/Vera.ttf",11)
+	local f = loadFont("data/Vera.ttf",16)
 	textFont(f)
 	gm = DklChartManager:new()
 	negra = loadImage('data/notes/negra.png')
