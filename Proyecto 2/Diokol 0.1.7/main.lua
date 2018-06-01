@@ -25,7 +25,7 @@ sostenido = nil
 
 function setup()
 	size(width,height)
-	local f = loadFont("data/Vera.ttf",11)
+	local f = loadFont("data/Vera.ttf",13)
 	textFont(f)
 	gm = DklChartManager:new()
 	negra = loadImage('data/notes/negra.png')
@@ -99,21 +99,21 @@ function mapValues(data)
 		if(tipoNota == 1)then
 			tipoNota = semicorchea
 		elseif(tipoNota == 2)then
-			tipoNota = corchea
-		elseif(tipoNota == 3)then
-			tipoNota = negra
-		elseif(tipoNota == 4)then
-			tipoNota = blanca
-		elseif(tipoNota == 5)then
-			tipoNota = redonda
-		elseif(tipoNota == 6)then
 			tipoNota = semicorcheaPuntillo
-		elseif(tipoNota == 7)then
+		elseif(tipoNota == 3)then
+			tipoNota = corchea
+		elseif(tipoNota == 4)then
 			tipoNota = corcheaPuntillo
-		elseif(tipoNota == 8)then
+		elseif(tipoNota == 5)then
+			tipoNota = negra
+		elseif(tipoNota == 6)then
 			tipoNota = negraPuntillo
-		elseif(tipoNota == 9)then
+		elseif(tipoNota == 7)then
+			tipoNota = blanca
+		elseif(tipoNota == 8)then
 			tipoNota = blancaPuntillo
+		elseif(tipoNota == 9)then
+			tipoNota = redonda
 		elseif(tipoNota == 10)then
 			tipoNota = redondaPuntillo
 		end
