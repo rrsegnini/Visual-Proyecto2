@@ -2,11 +2,12 @@
 ## Roberto Rojas Segnini y Sergio Hidalgo Fonseca
 ### Tecnológico de Costa Rica
 ### Curso: Visualización de Información
+### I Semestre del 2018
 #### Special thanks to professor Armando Arce for sharing his knowledge with us, his students.
 
 
 # ABSTRACT
-In this paper we present an algorithm to transform numeric values into musical symbols and notes, in order to create a visual representation of the data using a staff-like (musical pentagram) structure. The method is based on the basic rules of musical notation and written music; the well-known linear graphs and the theories of Auditory Displays and Sonification.
+In this paper we present an algorithm to transform numeric values into musical symbols and notes, in order to create a visual representation of the data using a staff-like (musical pentagram) structure. The method is based on the basic rules of musical notation and written music, the well-known linear graphs and the theories of Auditory Displays and Sonification.
 
 # 1. INTRODUCCIÓN
 Los datos son valiosos: números, cantidades de ventas y compras, altitudes/elevaciones, muertes, nacimientos, poblaciones... Los datos, organizados y almacenados correctamente, son extremadamente valiosos para encontrar patrones, predecir comportamientos y generar información relevante para la toma de decisiones, entre muchas otras cosas.
@@ -243,7 +244,7 @@ hacia arriba) corresponde a la nota Mi; el espacio siguiente a Fa, y así
 sucesivamente con las notas Sol, La, Si, Do y Re.
 
 <img src="https://github.com/rrsegnini/Visual-Proyecto2/blob/master/imgs/notaspenta.png" 
-width="400" alt="Distribución de las notas utilizadas en el algoritmo de pentagramificación.">
+width="500" alt="Distribución de las notas utilizadas en el algoritmo de pentagramificación.">
 **Fig. 5**. *Distribución de las notas utilizadas en el algoritmo de pentagramificación.*
 
 En la **Fig.5** se puede observar que la posición de la nota en el
@@ -318,3 +319,107 @@ archivo.
 <img src="https://github.com/rrsegnini/Visual-Proyecto2/blob/master/imgs/penta1.png" 
 width="600" alt="Ejemplo de diagrama realizado con el algoritmo de pentagramificación.">
 **Fig. 7**. *Ejemplo de diagrama realizado con el algoritmo de pentagramificación.*
+
+<img src="https://github.com/rrsegnini/Visual-Proyecto2/blob/master/imgs/penta2.png" 
+width="600" alt="Otro ejemplo de diagrama realizado con el algoritmo de pentagramificación.">
+**Fig. 8**. *Otro ejemplo de diagrama realizado con el algoritmo de pentagramificación.*
+
+En las **Figuras 7 y 8** se muestran dos ejemplos de diagramas
+realizados con el algoritmo de pentagramifiación presentado en este
+documento. Los conjuntos de datos utilizados siguen el esquema
+presentado en la sección **3.3.**.
+
+Como se puede observar, el algoritmo genera un pentagrama que puede ser
+leído como una partitura musical. Las líneas entre notas ayudan a
+encontrar y diferenciar el flujo de los eventos.
+
+# 5. CONCLUSIONES
+El campo de la sonificación y las representaciones auditivas son un área
+de estudio en proceso de expansión. Poco a poco, nuevas técnicas surgen
+y muestran resultados positivos a la hora de transmitir información;
+algunas otras técnicas auditivas quedan cortas ante sus contrapartes
+visuales.
+
+La combinación de técnicas tanto auditivas como visuales poseen un
+potencial grande: en las categorías en las que las representaciones
+auditivas no se desempeñan bien, se pueden utilizar ayudas visuales. Y,
+para compensar las fallas de las representaciones visuales, se pueden
+implementar estructuras auditivas. De este modo, se complementan las
+técnicas para crear una experiencia de transmisión y percepción de datos
+única.
+
+El algoritmo presentado utiliza una versión extremadamente simplificada
+de la notación musical regular. Para crear una partitura completa es
+necesario definir muchos más factores e incluir otras variables y
+elementos visuales que empobrecerían la simpleza de los gráficos y
+dificultarían su interpretación para personas con bajo o nulo
+conocimiento musical.
+
+# 5.1. Ventajas sobre el gráfico de líneas
+Como mencionamos, el gráfico de pentagrama es una modificación del
+gráfico de líneas. La pentagramificación, como es propuesta en este
+artículo, posee diversas ventajas sobre el gráfico tradicional
+mencionado.
+
+La ventaja más obvia es la influencia directa de la sonificación y sus
+ramas de estudio. Todo gráfico de pentagrama posee la información
+necesaria para convertirse en una pieza musical (conjunto se sonidos).
+Los puntos están ya ordenados, cada uno con una nota y una duración
+asignada.
+
+La segunda ventaja es la mencionada **duración de la nota**. Los
+símbolos en un gráfico de líneas son, normalmente, puntos que transmiten
+una variable de información: una tupla con una coordenada del eje X y
+una del eje Y; es decir, una posición en el plano. Aunque es posible
+utilizar colores o cambios en tamaño para representar otras variables de
+información, estas representaciones no son del todo claras.
+
+Los símbolos utilizados en notación musical (ver **Fig.4**) poseen,
+intrínsecamente, un valor de duración asignado: la negra dura menos que
+la blanca; la blanca dura menos que la redonda y así para todas las
+notas. Esta característica de los símbolos es utilizada para asignar una
+nueva dimensión de información a lo que antes eran solamente puntos en
+un plano XY.
+
+Se puede, entonces, utilizar una segunda variable numérica en el
+conjunto de datos (ver **Fig.6**). Estos datos son representados
+utilizando el mismo espacio que ocupa la primera columna numérica de
+datos. Un solo punto transmite, por lo tanto, dos tipos de información.
+
+# 5.2. Trabajo futuro
+El algoritmo puede ser modificado con el fin de generar partituras
+(gráficos de pentagramas) más complejos y completos. En el apartado
+gráfico, se debe generar una manera para poder concatenar las corcheas y
+semicorcheas, tal como se ve en las primeras cuatro notas de la
+**Fig.3**.
+
+También se pueden incluir más notas para ampliar la cantidad de valores
+en el eje Y.
+
+Otro aspecto a mejorar es el tamaño y el aspecto de las imágenes de las
+notas del gráfico. Su tamaño y resolución puede ser ampliado para
+mejorar la calidez visual del gráfico.
+
+Por último, es justo agregar la posibilidad de generar, además del
+gráfico, una estructura que contenga frecuencias y sus respectivos
+tiempos para que los pentagramas generados puedan ser convertidos en
+sonidos. De este modo, se crearía una combinación de técnicas visuales y
+auditivas más provechosa.
+
+# 6. BIBLIOGRAFÍA
+Cohen, M. A., Horowitz, T. S. y Wolfe, J. M. (2009). Auditory
+recognition memory is inferior to visual recognition memory. *PNAS, vol.
+106, no. 14*. Proceedings of the National Academy of Sciences.
+
+Hedge, A. (2013). Auditory Displays DEA 3250/6510. Cornell University.
+Estados Unidos.
+
+Hermann, T., Hunt, A. Neuhoff, J. G. (Eds). (2011). The Sonification
+Handbook. Logos Verlag, Berlin, Germany.
+
+Parseihian, G., Ystad, S., Aramaki, M y Kronland, R. (2015). The process
+of sonification design for guidance tasks. *Wi: Journal of Mobile Media.
+Vol.9, No.2*
+
+Schmidt, C. (2008). Reading Music: Common Notation. *Connexions*. Rice
+University. Houston: Texas.
